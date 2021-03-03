@@ -1,0 +1,141 @@
+@media (max-width: 576px) {
+    /* ================::Buttons::================ */
+    .btn-primary {
+        width: 90%;
+    }
+    /* ================::Half Carousel::================ */
+    body .half-carousel .half-carousel-info {
+        padding: 35px 10px 0 25px;
+    }
+    /* ================::Food Section::================ */
+    .food-search-container .form-group {
+        flex-direction: column;
+        height: auto;
+    }
+    .food-search-container .form-group input {
+        width: 100%;
+        margin-bottom: 15px;
+        height: 45px;
+    }
+    .food-search-container .form-group button {
+        margin: 0;
+        height: 45px;
+    }
+    .food-section {
+        padding: 45px 0px !important;
+    }
+    .food-card .card-img-top {
+        max-width: 160px;
+        width: 35%;
+    }
+}
+
+@media (max-width: 768px) {
+    /* ================::Food Section::================ */
+    .food-search-container .form-group {
+        width: 100%;
+    }
+    .food-section .food-cards {
+        flex-direction: column;
+    }
+    .food-card .card-img-top {
+        max-width: 160px;
+        width: 35%;
+    }
+}
+
+
+/* @media (min-width: 769px) {
+    .food-section .food-cards {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+} */
+
+@media (max-width: 992px) {
+    /* ================::Header::================ */
+    .header-container {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        background: var(--light-gray);
+        height: 80px;
+        padding: 0 20px;
+    }
+    .header-container .header-logo {
+        width: 100px;
+        position: relative;
+        left: unset;
+    }
+    .header-container #menu-toggle {
+        color: black;
+        display: block;
+    }
+    .header-upper,
+    .header-lower {
+        display: none;
+    }
+    /* ================::Half Carousel::================ */
+    .half-carousel {
+        height: auto;
+    }
+    .half-carousel .half-carousel-info {
+        margin-bottom: 35px;
+        overflow: auto;
+        padding: 35px 0 0;
+    }
+    .half-carousel .half-carousel-cards {
+        height: auto;
+    }
+    /* ================::Food Section::================ */
+    .food-section .food-cards .food-card {
+        width: 100%;
+    }
+    /* ================::Suppliers Page::================ */
+    .suppliersPage-body {
+        padding: 30px 15px 0;
+    }
+    /* ================::Supplier card::================ */
+    .supplier-card {
+        flex-direction: column;
+        height: auto;
+        width: 95%;
+        margin-bottom: 15px;
+        margin: 0 auto;
+    }
+    .supplier-card .card-img {
+        max-width: none;
+        width: 100%;
+        height: 220px;
+    }
+    .supplier-card .card-body {
+        flex-direction: column;
+        height: auto;
+    }
+    .supplier-card .card-body .card-info,
+    .supplier-card .card-body .card-price {
+        width: 100%;
+    }
+}
+
+@media (max-width: 1024px) {
+    /* ================::Food Section::================ */
+    .food-section {
+        padding: 45px 25px;
+    }
+    .food-section .food-cards {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+    .food-section .food-cards .food-card {
+        margin: 0 5px 10px
+    }
+}
+
+@media (max-width: 1200px) {
+    /* ================::Events Section::================ */
+    .events-section {
+        padding: 45px 0;
+    }
+}
