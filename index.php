@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>filter-box</title>
+    <title>Home Page</title>
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
@@ -18,15 +18,15 @@
 
 <body>
     <?php
-    include ('public/header.html');
-    include ('public/banner.html');
-    include ('public/main-gallery.html');
-    include ('public/half-carousel.php');
-    include ('public/half-carousel-reverse.php');
-    include ('public/half-carousel.php');
-    include ('public/events-home.php');
-    include ('public/anouncements.html');
-    include ('public/food-home.php');
+        include ('public/header.html');
+        include ('public/banner.html');
+        include ('public/main-gallery.html');
+        include ('public/half-carousel.php');
+        include ('public/half-carousel-reverse.php');
+        include ('public/half-carousel.php');
+        include ('public/events-home.php');
+        include ('public/anouncements.html');
+        include ('public/food-home.php');
     ?>
     
     <div class="overlay"></div>

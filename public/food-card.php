@@ -13,9 +13,9 @@
             </div>
         </div>
         <div class="card-body-bottom">
-            <h3>
+            <span>
                 <small>A partir de</small> R$ 600,00
-            </h3>
+            </span>
             <small>de 44 a 60 min.</small>
         </div>
     </div>

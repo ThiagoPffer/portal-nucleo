@@ -3,9 +3,9 @@
     <div class="card-body">
         <h5 class="card-title">Título que deve conter no card</h5>
         <div class="card-body-bottom">
-            <h3>
+            <span>
                 <small>A partir de</small> R$ 600,00
-            </h3>
+            </span>
             <a href="details.html" class="card-btn">Saber mais</a>
         </div>
     </div>

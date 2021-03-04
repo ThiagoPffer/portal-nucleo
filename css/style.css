@@ -63,6 +63,28 @@ h2 {
     font-size: 1.6rem !important;
 }
 
+h3 {
+    font-size: 1.4rem !important;
+}
+
+h4 {
+    font-size: 1rem !important;
+}
+
+p {
+    font-size: 1rem !important;
+}
+
+small {
+    font-size: 0.75rem !important;
+}
+
+
+/*
+h5 {
+    font-size: 1rem !important;
+} */
+
 
 /* Others::================ */
 
@@ -99,6 +121,38 @@ h2 {
     left: 0;
 }
 
+.section-title {
+    max-width: 520px;
+    margin: 0 auto;
+}
+
+.section-title h2,
+.section-title p {
+    color: var(--light-black);
+    width: 100%;
+    text-align: center;
+}
+
+.section-title h2 {
+    font-weight: bold;
+}
+
+.section-title p {
+    margin: 0;
+}
+
+@media (max-width: 992px) {
+    .section-title {
+        padding-left: 10px;
+    }
+    .section-title h2,
+    .section-title p {
+        color: var(--light-black);
+        width: 100%;
+        text-align: left;
+    }
+}
+
 a.btn-info {
     display: inline-block;
     text-align: center;
@@ -111,20 +165,6 @@ a.btn-info {
 
 .advice {
     color: red;
-}
-
-.section-title {
-    font-weight: bold;
-    text-align: center;
-    text-transform: uppercase;
-    width: fit-content;
-    margin: 0 auto 35px;
-}
-
-.section-title .title-line {
-    width: 100%;
-    height: 4px;
-    background: var(--primary-dark)
 }
 
 a.btn-info:hover {
@@ -673,6 +713,129 @@ body .btn-primary:hover {
 }
 
 
+/* ================Supplier Products::Supplier Banner::================ */
+
+.supplierBanner {
+    position: relative;
+    height: 410px;
+}
+
+.supplierBanner-gallery {
+    display: grid;
+    grid-template-areas: 'SPimg1 SPimg2' 'SPimg1 SPimg3';
+    grid-gap: 5px;
+    background: rgba(0, 0, 0, 0.5);
+    height: 100%;
+    overflow: hidden;
+}
+
+.supplierBanner-gallery img:nth-child(1) {
+    grid-area: SPimg1;
+}
+
+.supplierBanner-gallery img:nth-child(2) {
+    grid-area: SPimg2;
+}
+
+.supplierBanner-gallery img:nth-child(3) {
+    grid-area: SPimg3;
+}
+
+.supplierBanner-gallery img {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(80%);
+    cursor: pointer;
+    transition: .3s ease-out;
+}
+
+.supplierBanner-gallery img:hover {
+    filter: brightness(100%);
+}
+
+.supplierBanner-bar {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: start;
+    background: rgba(0, 0, 0, 0.6);
+    width: 100%;
+    padding: 0 25px;
+    position: absolute;
+    bottom: 0;
+}
+
+.supplierBanner-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgb(255, 255, 255);
+    width: 190px;
+    height: 135px;
+    border: 1px solid gray;
+    border-radius: 12px;
+    position: absolute;
+    bottom: -40px;
+    padding: 15px;
+}
+
+.supplierBanner-icon img {
+    width: 100%;
+    object-fit: cover;
+}
+
+.supplierBanner-title {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: start;
+    color: white;
+    padding: 15px 25px 15px 210px;
+}
+
+.supplierBanner-title h3 {
+    margin: 0;
+}
+
+@media (max-width: 576px) {
+    .supplierBanner-bar {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        background: rgba(0, 0, 0, 0.6);
+        width: 100%;
+        padding: 10px 15px;
+        position: absolute;
+        bottom: 0;
+    }
+    .supplierBanner-icon {
+        width: 160px;
+        height: auto;
+        margin-right: 10px;
+        position: relative;
+        bottom: unset;
+    }
+    .supplierBanner-title {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: start;
+        color: white;
+        padding: 0;
+    }
+}
+
+@media (max-width: 998px) {
+    .supplierBanner-title h3 {
+        font-size: 90% !important;
+    }
+}
+
+
 /* ================General::Filter box::================ */
 
 .mainFilter-wrapper {
@@ -708,14 +871,13 @@ body .btn-primary:hover {
     border-radius: 50px;
 }
 
-.mainFilter-container h2 {
+.mainFilter-container h3 {
     color: var(--light-black);
     margin-bottom: 0;
 }
 
 .mainFilter-container p {
     color: var(--light-black);
-    font-size: 16px;
     margin-bottom: 0;
 }
 
@@ -905,7 +1067,7 @@ body .btn-primary:hover {
     }
     .mainFilter-box .mainFilter-box-form .mainFilter-search-btn {
         width: 90% !important;
-        height: 80px !important;
+        height: 80px;
         margin: 15px auto;
         border-radius: 4px;
     }
@@ -961,7 +1123,6 @@ body .btn-primary:hover {
 .mainGallery-title h2 {
     color: var(--light-black);
     font-weight: bold;
-    margin: 0;
 }
 
 .mainGallery-title h2 span {
@@ -969,9 +1130,9 @@ body .btn-primary:hover {
 }
 
 .mainGallery-title p {
-    color: var(--light-black);
-    font-size: 18px;
-    font-weight: 500;
+    color: var(--light-description);
+    font-weight: 400;
+    font-size: 90% !important;
     margin: 0;
 }
 
@@ -1077,7 +1238,6 @@ body .btn-primary:hover {
     width: 120px;
     height: 120px;
     cursor: pointer;
-    /* transition: .1s; */
 }
 
 .card-filter span {
@@ -1087,7 +1247,6 @@ body .btn-primary:hover {
 
 .card-filter h4 {
     color: var(--primary-dark);
-    font-size: 1rem;
     font-weight: 600;
     margin-bottom: 0;
     margin-top: -5px;
@@ -1155,19 +1314,14 @@ body .btn-primary:hover {
     margin: 0;
 }
 
-.event-card .card-rightside small {
-    font-size: 12px;
-}
-
-.event-card .rightside-bottom h4 {
+.event-card .rightside-bottom small {
     display: flex;
     align-items: center;
-    font-size: 12px;
     text-transform: uppercase;
     margin: 0;
 }
 
-.event-card .rightside-bottom h4 span {
+.event-card .rightside-bottom small span {
     font-size: 20px;
     margin-right: 5px;
 }
@@ -1182,23 +1336,23 @@ body .btn-primary:hover {
     margin-right: 8px;
 }
 
-.event-card .card-leftside h3 {
+.event-card .card-leftside span {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     font-size: 24px;
 }
 
-.event-card .card-leftside h3 small {
+.event-card .card-leftside span small {
     font-size: 12px;
 }
 
-.event-card .card-leftside h3.card-date {
+.event-card .card-leftside span.card-date {
     font-size: 16px;
     font-weight: bold;
 }
 
-.event-card .card-leftside h3.card-price {
+.event-card .card-leftside span.card-price {
     font-weight: bold;
 }
 
@@ -1209,7 +1363,7 @@ body .btn-primary:hover {
 }
 
 @media (max-width: 991.98px) {
-    .event-card .card-body .card-body-bottom h3 {
+    .event-card .card-body .card-body-bottom span {
         font-size: .9rem;
     }
 }
@@ -1289,12 +1443,11 @@ body .btn-primary:hover {
     justify-content: space-between;
 }
 
-.food-card .card-body-bottom h3 {
+.food-card .card-body-bottom span {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     color: var(--light-black);
-    font-size: 18px;
     font-weight: bold;
     min-width: 100px;
     margin: auto 0;
@@ -1303,11 +1456,10 @@ body .btn-primary:hover {
     border-right: 1px solid rgb(204, 204, 204);
 }
 
-.food-card .card-body-bottom h3 small {
+.food-card .card-body-bottom span small {
     display: flex;
     text-align: left;
     color: var(--light-description);
-    font-size: 12px;
 }
 
 .food-card .card-body-bottom small {
@@ -1318,7 +1470,7 @@ body .btn-primary:hover {
 }
 
 @media (max-width: 991.98px) {
-    .food-card .card-body .card-body-bottom h3 {
+    .food-card .card-body .card-body-bottom span {
         font-size: .9rem;
     }
 }
@@ -1493,18 +1645,17 @@ body .btn-primary:hover {
     justify-content: space-between;
 }
 
-.card .card-body .card-body-bottom h3 {
+.card .card-body .card-body-bottom span {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     color: var(--light-description) !important;
-    font-size: 14px;
     font-weight: bold;
     margin: auto 0;
 }
 
 @media (max-width: 991.98px) {
-    .card .card-body .card-body-bottom h3 {
+    .card .card-body .card-body-bottom span {
         font-size: .9rem;
     }
 }
@@ -1523,6 +1674,89 @@ body .btn-primary:hover {
 
 .card .card-body .card-body-bottom .card-btn:hover {
     background-color: var(--primary-light);
+}
+
+
+/* ================Suppliers page::Full Carousel::================ */
+
+.full-carousel {
+    max-width: 1440px;
+    padding: 25px 0;
+    overflow: hidden;
+}
+
+.full-carousel .full-carousel-info {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: top;
+    overflow: auto;
+    margin-bottom: 15px;
+}
+
+.full-carousel-info h2,
+.full-carousel-info p {
+    color: var(--light-black);
+    width: 100%;
+    margin: 0;
+}
+
+.full-carousel-info h2 {
+    font-weight: 600;
+}
+
+.full-carousel-cards {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    position: relative;
+}
+
+.full-carousel-cards .swiper-wrapper {
+    padding-bottom: 15px;
+}
+
+.full-carousel-cards .swiper-button-prev::after,
+.full-carousel-cards .swiper-button-next::after {
+    display: none;
+}
+
+.full-carousel-cards .swiper-button-prev span,
+.full-carousel-cards .swiper-button-next span {
+    font-size: 38px;
+    color: var(--light-black);
+    transition: .2s ease-out;
+}
+
+.full-carousel-cards .swiper-button-prev:hover span {
+    transform: translateX(-2px);
+}
+
+.full-carousel-cards .swiper-button-next:hover span {
+    transform: translateX(2px);
+}
+
+.full-carousel-cards .swiper-button-prev {
+    background: white;
+    width: 40px;
+    height: 60px;
+    box-shadow: rgba(0, 0, 0, 0.3) 0 0 15px;
+    border-top-right-radius: 50px;
+    border-bottom-right-radius: 50px;
+    padding-right: 10px;
+    left: 0;
+}
+
+.full-carousel-cards .swiper-button-next {
+    background: white;
+    width: 40px;
+    height: 60px;
+    box-shadow: rgba(0, 0, 0, 0.3) 0 0 15px;
+    border-top-left-radius: 50px;
+    border-bottom-left-radius: 50px;
+    padding-left: 10px;
+    right: 0;
 }
 
 
@@ -1561,10 +1795,6 @@ body .btn-primary:hover {
 .half-carousel-info small {
     font-size: 14px;
     margin: 10px 0;
-}
-
-.half-carousel-info p {
-    font-size: 16px;
 }
 
 .half-carousel-cards {
@@ -1628,7 +1858,7 @@ body .btn-primary:hover {
     padding: 45px 80px;
 }
 
-.events-section h2,
+.events-section .section-title,
 .events-section .mainFilter-container,
 .events-section .event-cards {
     margin-bottom: 35px;
@@ -1648,6 +1878,16 @@ body .btn-primary:hover {
 
 .events-section .event-cards .event-card {
     margin: 0 5px 15px;
+}
+
+@media (max-width: 576px) {
+    .events-section .mainFilter-box .mainFilter-search-btn {
+        font-size: 1rem;
+        height: 50px;
+    }
+    .events-section .mainFilter-box .mainFilter-search-btn span {
+        font-size: 1.4rem !important;
+    }
 }
 
 
@@ -1683,6 +1923,7 @@ body .btn-primary:hover {
     padding: 45px 80px;
 }
 
+.food-section .section-title,
 .food-section .food-search-container,
 .food-section .food-banners,
 .food-section .food-cards {
@@ -1697,7 +1938,6 @@ body .btn-primary:hover {
 }
 
 .food-search-container h3 {
-    font-size: 20px;
     text-align: center;
     margin-bottom: 15px;
 }
@@ -1777,11 +2017,11 @@ body .btn-primary:hover {
 /* ================::Suppliers Page::================ */
 
 .suppliersPage-body {
-    padding: 30px 60px 0;
+    padding: 30px 48px 0;
 }
 
 .suppliersPage-body .supplier-card {
-    margin-bottom: 25px;
+    margin: 0 auto 25px;
 }
 
 .suppliersPage-filter {
@@ -1848,3 +2088,14 @@ body .btn-primary:hover {
     background: white;
     box-shadow: rgba(0, 0, 0, 0.1) 0 5px 10px;
 }
+
+
+/* ================::Supplier Products::================ */
+
+
+/* .supplierProduct-sections {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    height: 1100px;
+} */

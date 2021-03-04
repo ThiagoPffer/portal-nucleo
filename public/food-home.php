@@ -1,12 +1,11 @@
 <div class="container-fluid body-bg">
     <div class="content-wrapper food-section">
-        <h2 class="section-title">
-            Alimentação
-            <div class="title-line"></div>
-        </h2>
+        <div class="section-title">
+            <h2>Alimentação</h2>
+            <p>Veja abaixo os melhores restaurantes e lanchonetes da região:</p>
+        </div>
 
         <div class="food-search-container">
-            <h3>Faça uma busca rápida abaixo:</h3>
             <form action="#" class="form-group">
                 <input type="text" placeholder="Busque por uma cidade, endereço ou estabelecimento">
                 <button type="submit">Buscar</button>

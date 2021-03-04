@@ -36,6 +36,10 @@
             }
         ?>
     </div>
+
+    <?php
+        include ('public/full-carousel.php');
+    ?>
     
     <div class="overlay"></div>
 
@@ -73,6 +77,30 @@
                 },
                 1200: {
                     slidesPerView: 9
+                }
+            }
+        });
+
+        var swiper = new Swiper('.full-carousel-cards', {
+            spaceBetween: 10,
+            centeredSlides: false,
+            grabCursor: true,
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+            breakpoints: {
+                0: {
+                    slidesPerView: 1
+                },
+                520: {
+                    slidesPerView: 2
+                },
+                1024: {
+                    slidesPerView: 3
+                },
+                1200: {
+                    slidesPerView: 4
                 }
             }
         });
