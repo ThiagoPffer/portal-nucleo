@@ -35,22 +35,12 @@
     .food-search-container .form-group {
         width: 100%;
     }
-    .food-section .food-cards {
-        flex-direction: column;
-    }
     .food-card .card-img-top {
         max-width: 160px;
         width: 35%;
     }
 }
 
-
-/* @media (min-width: 769px) {
-    .food-section .food-cards {
-        flex-direction: row;
-        flex-wrap: wrap;
-    }
-} */
 
 @media (max-width: 992px) {
     /* ================::Header::================ */
@@ -88,10 +78,6 @@
     .half-carousel .half-carousel-cards {
         height: auto;
     }
-    /* ================::Food Section::================ */
-    .food-section .food-cards .food-card {
-        width: 100%;
-    }
     /* ================::Suppliers Page::================ */
     .suppliersPage-body {
         padding: 30px 15px 0;
@@ -123,13 +109,6 @@
     /* ================::Food Section::================ */
     .food-section {
         padding: 45px 25px;
-    }
-    .food-section .food-cards {
-        flex-direction: row;
-        flex-wrap: wrap;
-    }
-    .food-section .food-cards .food-card {
-        margin: 0 5px 10px
     }
 }
 

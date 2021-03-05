@@ -8,7 +8,7 @@
     <title>Home Page</title>
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style.css?v=<?php echo time(); ?>">
     <link rel="stylesheet" href="css/responsive.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.materialdesignicons.com/5.4.55/css/materialdesignicons.min.css">
@@ -17,6 +17,20 @@
 </head>
 
 <body>
+
+    <!-- Funcionalidades que faltam: -->
+    <!-- :: (Suppliers Page) .active nos cards pequenos que forem selecionados -->
+    <!-- :: (Suppliers Page) abrir "modal" com os filtros ao pressionar os botões abaixo dos cards (ordenação, etc) -->
+    <!-- :: (Suppliers Page) compactar o card quando exibido responsivamente e criar um botão que o expande -->
+    <!-- :: (Geral) transformar abas do filtro responsivo em um select-->
+    <!-- :: (Geral) colocar setas nos carrosséis e scrolls que não tiverem (todos) -->
+    <!-- :: (Geral) criar nova header -->
+    <!-- :: (Supplier Products) criar página interna dos produtos -->
+
+
+    <!-- Não consigo: -->
+    <!-- :: (Geral) mudar caixa de filtro principal quando selecionar um tipo diferente de busca (Hospedagem, gastronomia, eventos, etc) -->
+
     <?php
         include ('public/header.html');
         include ('public/banner.html');
@@ -86,6 +100,9 @@
             spaceBetween: 10,
             centeredSlides: false,
             grabCursor: true,
+            pagination: {
+                el: '.swiper-pagination',
+            },
             breakpoints: {
                 // when window width is >= 0px
                 0: {
@@ -101,11 +118,39 @@
             }
         });
 
+        // food-cards:
+        var swiper = new Swiper('.food-cards', {
+            slidesPerView: 3,
+            spaceBetween: 10,
+            centeredSlides: false,
+            grabCursor: true,
+            pagination: {
+                el: '.swiper-pagination',
+            },
+            breakpoints: {
+                // when window width is >= 0px
+                0: {
+                    slidesPerView: 1
+                },
+                // when window width is >= 520px
+                520: {
+                    slidesPerView: 2
+                },
+                1024: {
+                    slidesPerView: 3
+                }
+            }
+        });
+
+
         // event-cards:
         var swiper = new Swiper('.event-cards', {
             slidesPerView: 3,
             spaceBetween: 10,
             centeredSlides: false,
+            pagination: {
+                el: '.swiper-pagination',
+            },
             breakpoints: {
                 // when window width is >= 0px
                 0: {

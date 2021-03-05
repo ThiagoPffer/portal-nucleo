@@ -23,12 +23,15 @@
             <div class="swiper-pagination"></div>
         </div>
 
-        <div class="food-cards">
-            <?php 
-                for($i = 0; $i < 3; $i++){
-                    include 'food-card.php';
-                }
-            ?>
+        <div class="swiper-container food-cards">
+            <div class="swiper-wrapper">
+                <?php 
+                    for($i = 0; $i < 3; $i++){
+                        include 'food-card.php';
+                    }
+                ?>
+            </div>
+            <div class="swiper-pagination"></div>
         </div>
 
         <?php 

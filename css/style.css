@@ -177,6 +177,24 @@ a.btn-info:hover {
     }
 }
 
+.food-section .swiper-container,
+.events-section .swiper-container{
+    position: relative !important;
+    padding-bottom: 25px;
+}
+
+.filterCards-container .swiper-container{
+    position: relative !important;
+    padding-bottom: 25px !important;
+}
+
+.food-section .swiper-pagination,
+.events-section .swiper-pagination,
+.filterCards-container .swiper-pagination{
+    position: absolute !important;
+    bottom: 0 !important;
+}
+
 
 /* ================General::Utilities::================ */
 
@@ -1376,7 +1394,7 @@ body .btn-primary:hover {
     flex-direction: row;
     align-items: flex-start;
     width: 395px;
-    height: 160px;
+    height: 160px !important;
     background-color: white;
     border-radius: var(--medium-b-radius);
     box-shadow: rgba(0, 0, 0, 0.05) 0 0 10px;
@@ -1876,10 +1894,6 @@ body .btn-primary:hover {
     position: relative;
 }
 
-.events-section .event-cards .event-card {
-    margin: 0 5px 15px;
-}
-
 @media (max-width: 576px) {
     .events-section .mainFilter-box .mainFilter-search-btn {
         font-size: 1rem;
@@ -2009,9 +2023,7 @@ body .btn-primary:hover {
     justify-content: space-between;
 }
 
-.food-section .food-cards .food-card {
-    margin: 0 5px;
-}
+
 
 
 /* ================::Suppliers Page::================ */
