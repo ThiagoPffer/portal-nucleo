@@ -1,4 +1,4 @@
-<div class="filterCards-container">
+<div class="filterCards-container content-wrapper">
     <div class="filterCards-links">
         <a href="">/Brasil</a>
         <a href="">/Sul</a>
@@ -6,6 +6,8 @@
         <a href="">/Laguna</a>
         <a href="">/Hospedagem</a>
     </div>
+
+    <h2>Filtros:</h2>
 
     <div class="swiper-container filterCards-cards">
         <div class="swiper-wrapper">
@@ -18,11 +20,14 @@
         <div class="swiper-pagination"></div>
     </div>
 
-    <div class="filterCards-btns">
-        <button class="filterBtn">Ordenação</button>
-        <button class="filterBtn">Turismo</button>
-        <button class="filterBtn">Raio</button>
-        <button class="filterBtn">Empresa</button>
-        <button class="filterBtn">Preferências</button>
+    <div class="swiper-container filterCards-btns">
+        <div class="swiper-wrapper">
+            <button class="swiper-slide filterBtn">Ordenação</button>
+            <button class="swiper-slide filterBtn">Turismo</button>
+            <button class="swiper-slide filterBtn">Raio</button>
+            <button class="swiper-slide filterBtn">Empresa</button>
+            <button class="swiper-slide filterBtn">Preferências</button>
+        </div>
+        <div class="swiper-pagination"></div>
     </div>
 </div>

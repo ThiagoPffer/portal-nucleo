@@ -9,17 +9,18 @@
     }
     /* ================::Food Section::================ */
     .food-search-container .form-group {
-        flex-direction: column;
-        height: auto;
+        border-radius: var(--light-b-radius);
+        overflow: hidden;
     }
     .food-search-container .form-group input {
-        width: 100%;
-        margin-bottom: 15px;
+        flex: 1;
         height: 45px;
+        border-radius: 0;
     }
     .food-search-container .form-group button {
         margin: 0;
         height: 45px;
+        border-radius: 0;
     }
     .food-section {
         padding: 45px 0px !important;
@@ -40,7 +41,6 @@
         width: 35%;
     }
 }
-
 
 @media (max-width: 992px) {
     /* ================::Header::================ */

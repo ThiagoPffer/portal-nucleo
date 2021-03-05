@@ -30,9 +30,11 @@
     <div class="suppliersPage-body">
         <?php
             include ('public/filter-cards.php');
-
+        ?>
+        <h2 class="mb-4 content-wrapper">Estabelecimentos encontrados: </h2>
+        <?php    
             for($i = 0; $i < 2; $i++){
-                include 'public/supplier-card.php';
+                    include 'public/supplier-card.php';
             }
         ?>
     </div>
@@ -60,6 +62,26 @@
                 this.className += " active";
             });
         }
+
+        var swiper = new Swiper('.filterCards-btns', {
+            spaceBetween: 10,
+            centeredSlides: false,
+            slidesPerView: 'auto',
+            pagination: {
+                el: '.swiper-pagination',
+            },
+            breakpoints: {
+                0: {
+                    slidesPerView: 2
+                },
+                520: {
+                    slidesPerView: 4
+                },
+                1024: {
+                    slidesPerView: 5
+                }
+            }
+        });
 
         var swiper = new Swiper('.filterCards-cards', {
             spaceBetween: 10,

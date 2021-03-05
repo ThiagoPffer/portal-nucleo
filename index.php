@@ -22,11 +22,19 @@
     <!-- :: (Suppliers Page) .active nos cards pequenos que forem selecionados -->
     <!-- :: (Suppliers Page) abrir "modal" com os filtros ao pressionar os botões abaixo dos cards (ordenação, etc) -->
     <!-- :: (Suppliers Page) compactar o card quando exibido responsivamente e criar um botão que o expande -->
-    <!-- :: (Geral) transformar abas do filtro responsivo em um select-->
-    <!-- :: (Geral) colocar setas nos carrosséis e scrolls que não tiverem (todos) -->
-    <!-- :: (Geral) criar nova header -->
-    <!-- :: (Supplier Products) criar página interna dos produtos -->
 
+    <!-- Fazendo agora: -->
+
+    <!-- Finalizados: -->
+    <!-- :: (Home) modificar botão "buscar" da seção de alimentos para algo "menos agressivo" -->
+    <!-- :: (Supplier Products) criar página interna dos produtos -->
+    <!-- :: (Geral) adicionar títulos nas seções que não possuem -->
+    <!-- :: (Geral) colocar indicadores (dots ou setas) nos carrosséis que não tiverem (todos) -->
+    <!-- :: (Geral) transformar abas do filtro responsivo em um select-->
+
+    <!-- Parados -->
+    <!-- :: (Geral) criar nova header -->
+    <!-- :: (Supplier Products) criar modais para a galeria -->
 
     <!-- Não consigo: -->
     <!-- :: (Geral) mudar caixa de filtro principal quando selecionar um tipo diferente de busca (Hospedagem, gastronomia, eventos, etc) -->
@@ -69,6 +77,9 @@
             slidesPerView: 3,
             spaceBetween: 15,
             grabCursor: true,
+            autoplay: {
+                delay: 5000,
+            },
             navigation: {
                 nextEl: '.swiper-button-next',
                 prevEl: '.swiper-button-prev',
@@ -100,6 +111,9 @@
             spaceBetween: 10,
             centeredSlides: false,
             grabCursor: true,
+            autoplay: {
+                delay: 5000,
+            },
             pagination: {
                 el: '.swiper-pagination',
             },
