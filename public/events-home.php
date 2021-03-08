@@ -11,19 +11,19 @@
                 <form class="mainFilter-box-form" action="#">
                     <div class="form-group">
                         <label class="sr-only" for="select2">Data</label>
-                        <input type="date" class="form-control" name="entrada" placeholder="Insira uma data de entrada" required>
+                        <input type="text" class="form-control" onfocus="(this.type='date')" onblur="(this.type='text')" name="entrada" placeholder="Data" required>
                     </div>
                     <div class="form-group">
                         <label class="sr-only" for="select4">Tipo de Evento</label>
                         <select name="hospedes" class="form-control">
-                                <option value="" selected>SELECIONE</option><option value="shows">Shows</option><option value="feiras">Feiras</option><option value="internacionais">Internacionais</option><option value="esportivos">Esportivos</option>
+                                <option value="" selected>Tipo de Evento</option><option value="shows">Shows</option><option value="feiras">Feiras</option><option value="internacionais">Internacionais</option><option value="esportivos">Esportivos</option>
                                 <option value="culinario">Culinários</option>
                             </select>
                     </div>
                     <div class="form-group">
                         <label class="sr-only" for="select4">Nº de pessoas</label>
                         <select name="hospedes" class="form-control">
-                                            <option value="" selected>SELECIONE</option><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option>
+                                            <option value="" selected>Nº de pessoas</option><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option>
                                             <option value="5+">5 ou mais</option>
                                         </select>
                     </div>
