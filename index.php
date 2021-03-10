@@ -20,7 +20,6 @@
 
     <!-- Funcionalidades que faltam: -->
     <!-- :: (Suppliers Page) .active nos cards pequenos que forem selecionados -->
-    <!-- :: (Suppliers Page) abrir "modal" com os filtros ao pressionar os botões abaixo dos cards (ordenação, etc) -->
     <!-- :: (Suppliers Page) compactar o card quando exibido responsivamente e criar um botão que o expande -->
 
     <!-- Fazendo agora: -->
@@ -31,6 +30,7 @@
     <!-- :: (Geral) adicionar títulos nas seções que não possuem -->
     <!-- :: (Geral) colocar indicadores (dots ou setas) nos carrosséis que não tiverem (todos) -->
     <!-- :: (Geral) transformar abas do filtro responsivo em um select-->
+    <!-- :: (Suppliers Page) abrir "modal" com os filtros ao pressionar os botões abaixo dos cards(ordenação, etc) -->
 
     <!-- Parados -->
     <!-- :: (Geral) criar nova header -->
@@ -155,7 +155,6 @@
                 }
             }
         });
-
 
         // event-cards:
         var swiper = new Swiper('.event-cards', {

@@ -28,31 +28,27 @@
     </div>
 
     <div class="suppliersPage-header content-wrapper">
-        <h2>Eventos em Laguna</h2>
+        <h2>Lazer em Laguna</h2>
         <?php
             include ('public/filter-cards.php');
         ?>
     </div>
     
     <div class="suppliersPage-body content-wrapper">
-        <h3 class="content-wrapper">Eventos encontrados: </h3>
+        <h3 class="content-wrapper">Lazeres encontrados: </h3>
         <div class="filterCards-links">
             <a href="">/Brasil</a>
             <a href="">/Sul</a>
             <a href="">/Santa Catarina</a>
             <a href="">/Laguna</a>
-            <a href="">/Eventos</a>
+            <a href="">/Lazer</a>
         </div>
-        <div class="swiper-container mb-4 full-carousel-cards">
-            <div class="swiper-wrapper">
-                <?php    
-                    for($i = 0; $i < 10; $i++){
-                        include 'public/event-card.php';
-                    }
-                ?>
-            </div>
-            <div class="swiper-button-prev"><span class="mdi mdi-chevron-left"></span></div>
-            <div class="swiper-button-next"><span class="mdi mdi-chevron-right"></span></div>
+        <div class="cards-container">
+            <?php    
+                for($i = 0; $i < 10; $i++){
+                    include 'public/general-card.php';
+                }
+            ?>
         </div>
 
         <h3 class="pb-2 mb-3 border-bottom content-wrapper">Mais Visitados: </h3>
@@ -60,7 +56,7 @@
             <div class="swiper-wrapper">
                 <?php    
                     for($i = 0; $i < 9; $i++){
-                        include 'public/event-card.php';
+                        include 'public/general-card.php';
                     }
                 ?>
             </div>
@@ -68,12 +64,12 @@
             <div class="swiper-button-next"><span class="mdi mdi-chevron-right"></span></div>
         </div>
 
-        <h3 class="pb-2 mb-3 border-bottom content-wrapper">Tipo de Evento 1: </h3>
+        <h3 class="pb-2 mb-3 border-bottom content-wrapper">Tipo de Lazer 1: </h3>
         <div class="swiper-container mb-4 full-carousel-cards">
             <div class="swiper-wrapper">
                 <?php    
                     for($i = 0; $i < 9; $i++){
-                        include 'public/event-card.php';
+                        include 'public/general-card.php';
                     }
                 ?>
             </div>
@@ -81,12 +77,12 @@
             <div class="swiper-button-next"><span class="mdi mdi-chevron-right"></span></div>
         </div>
 
-        <h3 class="pb-2 mb-3 border-bottom content-wrapper">Tipo de Evento 2: </h3>
+        <h3 class="pb-2 mb-3 border-bottom content-wrapper">Tipo de Lazer 2: </h3>
         <div class="swiper-container mb-4 full-carousel-cards">
             <div class="swiper-wrapper">
                 <?php    
                     for($i = 0; $i < 9; $i++){
-                        include 'public/event-card.php';
+                        include 'public/general-card.php';
                     }
                 ?>
             </div>
@@ -109,8 +105,8 @@
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 
     <script>
-        const filterCardTitles = ['Musicais', 'Esportivos', 'Feiras', 'Shows', 'Palestras', 'Workshops', 'Gastronômicos', 'Artísticos', 'Saúde', 'Infantil'];
-        const filterCardIcons = ['mdi-music', 'mdi-soccer', 'mdi-table-furniture', 'mdi-microphone-variant', 'mdi-account-details', 'mdi-lightbulb-on-outline', 'mdi-silverware-variant', 'mdi-brush', 'mdi-hospital', 'mdi-car-child-seat'];
+        const filterCardTitles = ['Música', 'Esportes', 'Parques', 'Temáticos', 'Passeios', 'Museus', 'Aventura'];
+        const filterCardIcons = ['mdi-music', 'mdi-soccer', 'mdi-pine-tree', 'mdi-castle', 'mdi-walk', 'mdi-bank', 'mdi-hiking'];
 
         insertContent();
 
