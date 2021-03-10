@@ -2,12 +2,8 @@
     <h3>Filtros:</h3>
 
     <div class="swiper-container filterCards-cards">
-        <div class="swiper-wrapper">
-            <?php 
-                for($i = 0; $i < 7; $i++){
-                    include 'card-filter.php';
-                }
-            ?>
+        <div id="filterCardsContainer" class="swiper-wrapper">
+
         </div>
         
         <div class="swiper-button-prev"><span class="mdi mdi-chevron-left"></span></div>

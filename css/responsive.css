@@ -79,7 +79,8 @@
         height: auto;
     }
     /* ================::Suppliers Page::================ */
-    .suppliersPage-body {
+    .suppliersPage-body,
+    .suppliersPage-header {
         padding: 30px 15px 0;
     }
     /* ================::Supplier card::================ */

@@ -1,12 +1,32 @@
-// Filter Cards
+// Selecionar os cards
+// Criar os cards a partir de um for()
+// Determinar o numero de cards pelo array de títulos
 
+// Filter Cards & Section title
 var filterCardTypes = document.getElementsByClassName('card-filter');
-const hospedagemTitles = ['Hotéis', 'Cabanas', 'Hostéis', 'Casas', 'Chácaras', 'Pousadas', 'Chalés'];
-const hospedagemIcons = ['mdi-office-building-outline', 'mdi-home-variant-outline', 'mdi-bed-outline', 'mdi-home-modern', 'mdi-home-outline', 'mdi-bed-king-outline', 'mdi-home-roof']
+const filterCardsContainer = document.getElementById('filterCardsContainer');
 
-for (var i = 0; i < filterCardTypes.length; i++) {
-    var filterCardTitle = filterCardTypes[i].querySelector("h4");
-    var filterCardIcon = filterCardTypes[i].querySelector("span");
-    filterCardTitle.innerHTML = hospedagemTitles[i];
-    filterCardIcon.classList.add(hospedagemIcons[i]);
+// Cria o Card
+function createCards() {
+    const filterCard = document.createElement('div');
+    const filterCardIcon = document.createElement('span');
+    const filterCardTitle = document.createElement('h4');
+
+    filterCard.classList.add('swiper-slide', 'card-filter');
+    filterCardIcon.classList.add('mdi');
+
+    filterCardsContainer.appendChild(filterCard);
+    filterCard.appendChild(filterCardIcon);
+    filterCard.appendChild(filterCardTitle);
+}
+
+// Insere o conteúdo no card
+function insertContent() {
+    for (var i = 0; i < filterCardTitles.length; i++) {
+        createCards();
+        var filterCardTitle = filterCardTypes[i].querySelector("h4");
+        var filterCardIcon = filterCardTypes[i].querySelector("span");
+        filterCardTitle.innerHTML = filterCardTitles[i];
+        filterCardIcon.classList.add(filterCardIcons[i]);
+    }
 }

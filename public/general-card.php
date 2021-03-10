@@ -6,7 +6,7 @@
             <span>
                 <small>A partir de</small> R$ 600,00
             </span>
-            <a href="details.html" class="card-btn">Saber mais</a>
+            <a href="details.php" class="card-btn">Saber mais</a>
         </div>
     </div>
 </div>
