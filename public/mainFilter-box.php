@@ -23,7 +23,7 @@
         </div>
 
         <!-- ========::HOSPEDAGEM::======== -->
-        <div class="mainFilter-box">
+        <!-- <div class="mainFilter-box">
             <form class="mainFilter-box-form" action="# ">
                 <div class="form-group">
                     <label class="sr-only" for="localizacao">Localização</label>
@@ -46,7 +46,7 @@
                 </div>
                 <button class="mainFilter-search-btn " type="submit ">Buscar<span class="mdi mdi-magnify "></span></button>
             </form>
-        </div>
+        </div> -->
         <!-- ========::ALIMENTAÇÃO::======== -->
         <!-- <div class="mainFilter-box ">
             <form class="mainFilter-box-form " action="# ">
@@ -118,7 +118,7 @@
             </form>
         </div> -->
         <!-- ========::TRANSPORTE::======== -->
-        <!-- <div class="mainFilter-box">
+        <div class="mainFilter-box">
             <form class="mainFilter-box-form" action="#">
                 <div class="form-group">
                     <label class="sr-only" for="localizacao">Localização</label>
@@ -137,6 +137,6 @@
                 </div>
                 <button class="mainFilter-search-btn" type="submit">Buscar<span class="mdi mdi-magnify"></span></button>
             </form>
-        </div> -->
+        </div> 
     </div>
 </div>

@@ -28,25 +28,25 @@
     </div>
 
     <div class="suppliersPage-header content-wrapper">
-        <h2>Lazer em Laguna</h2>
+        <h2>Transporte em Laguna</h2>
         <?php
             include ('public/filter-cards.php');
         ?>
     </div>
     
     <div class="suppliersPage-body content-wrapper">
-        <h3 class="content-wrapper">Lazeres encontrados: </h3>
+        <h3 class="content-wrapper">Transfers disponíveis: </h3>
         <div class="filterCards-links">
             <a href="">/Brasil</a>
             <a href="">/Sul</a>
             <a href="">/Santa Catarina</a>
             <a href="">/Laguna</a>
-            <a href="">/Lazer</a>
+            <a href="">/Transfer</a>
         </div>
         <div class="mb-3 cards-container">
             <?php    
-                for($i = 0; $i < 10; $i++){                    
-                    include 'public/general-card.php';
+                for($i = 0; $i < 3; $i++){                    
+                    include 'public/transfer-card.php';
                 }
             ?>
         </div>
@@ -54,45 +54,6 @@
         <?php
             include ('public/pagination.php');
         ?>
-            
-        <h3 class="pb-2 mb-3 border-bottom content-wrapper">Mais Visitados: </h3>
-        <div class="swiper-container mb-4 full-carousel-cards">
-            <div class="swiper-wrapper">
-                <?php    
-                    for($i = 0; $i < 9; $i++){
-                        include 'public/general-card.php';
-                    }
-                ?>
-            </div>
-            <div class="swiper-button-prev"><span class="mdi mdi-chevron-left"></span></div>
-            <div class="swiper-button-next"><span class="mdi mdi-chevron-right"></span></div>
-        </div>
-
-        <h3 class="pb-2 mb-3 border-bottom content-wrapper">Tipo de Lazer 1: </h3>
-        <div class="swiper-container mb-4 full-carousel-cards">
-            <div class="swiper-wrapper">
-                <?php    
-                    for($i = 0; $i < 9; $i++){
-                        include 'public/general-card.php';
-                    }
-                ?>
-            </div>
-            <div class="swiper-button-prev"><span class="mdi mdi-chevron-left"></span></div>
-            <div class="swiper-button-next"><span class="mdi mdi-chevron-right"></span></div>
-        </div>
-
-        <h3 class="pb-2 mb-3 border-bottom content-wrapper">Tipo de Lazer 2: </h3>
-        <div class="swiper-container mb-4 full-carousel-cards">
-            <div class="swiper-wrapper">
-                <?php    
-                    for($i = 0; $i < 9; $i++){
-                        include 'public/general-card.php';
-                    }
-                ?>
-            </div>
-            <div class="swiper-button-prev"><span class="mdi mdi-chevron-left"></span></div>
-            <div class="swiper-button-next"><span class="mdi mdi-chevron-right"></span></div>
-        </div>
 
         <?php
             include ('public/full-carousel.php');
