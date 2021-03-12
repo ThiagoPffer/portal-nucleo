@@ -1,5 +1,5 @@
 <div class="container-fluid body-bg">
-    <div class="content-wrapper food-section">
+    <div class="mw-1440 food-section">
 
     <div class="swiper-container food-banners">
             <div class="swiper-wrapper">
@@ -30,7 +30,7 @@
         <div class="swiper-container food-cards">
             <div class="swiper-wrapper">
                 <?php 
-                    for($i = 0; $i < 3; $i++){
+                    for($i = 0; $i < 4; $i++){
                         include 'food-card.php';
                     }
                 ?>

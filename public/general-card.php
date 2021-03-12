@@ -1,12 +1,19 @@
 <div class="swiper-slide card">
     <img class="card-img-top" src="images/g-card-img.png" alt="Card image cap">
     <div class="card-body">
-        <h5 class="card-title">Título que deve conter no card</h5>
-        <div class="card-body-bottom">
-            <span>
-                <small>A partir de</small> R$ 600,00
-            </span>
-            <a href="details.php" class="card-btn">Saber mais</a>
+        <h5 class="card-title">
+            <small><span class="mdi mdi-map-marker"></span>Cidade - UF</small><br>
+            Título que deve conter no card
+        </h5>
+        <div class="card-content">
+            <h4 class="card-supplier">
+                <small>Fornecimento:<br></small>
+                Conventos
+            </h4>
+            <h4 class="card-price">
+                <small>A partir de <br></small>
+                R$ 600,00
+            </h4>
         </div>
     </div>
 </div>

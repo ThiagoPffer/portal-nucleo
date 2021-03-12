@@ -1,4 +1,4 @@
-<div class="filterCards-container content-wrapper">
+<div class="filterCards-container mw-1440">
     <h3>Filtros:</h3>
 
     <div class="swiper-container filterCards-cards">

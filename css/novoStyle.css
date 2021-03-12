@@ -1,3 +1,13 @@
+/* @media (max-width: 576px) {}
+
+@media (max-width: 768px) {}
+
+@media (max-width: 992px) {}
+
+@media (max-width: 1024px) {}
+
+@media (max-width: 1200px) {} */
+
 * {
     box-sizing: border-box !important;
     outline-offset: none !important;
@@ -48,13 +58,8 @@ a {
     cursor: pointer;
 }
 
-.swiper-container {
-    border-radius: var(--medium-b-radius) !important;
-    overflow: hidden;
-}
 
-
-/* ================::Universals::================ */
+/* ================General::Components::================ */
 
 
 /* Fonts::================ */
@@ -81,7 +86,7 @@ small {
 }
 
 
-/* Others::================ */
+/* Components::================ */
 
 .discount-badge {
     color: white;
@@ -173,22 +178,16 @@ a.btn-info {
     transition: background .4s;
 }
 
-.advice {
-    color: red !important;
-}
-
-.available {
-    color: green !important;
-}
-
 a.btn-info:hover {
     text-decoration: none;
 }
 
-@media (min-width: 1200px) {
-    .container {
-        max-width: 1220px !important;
-    }
+
+/* Swiper::================ */
+
+.swiper-container {
+    border-radius: var(--medium-b-radius) !important;
+    overflow: hidden;
 }
 
 .food-section .swiper-container,
@@ -305,6 +304,14 @@ h3.reverse {
     text-align: end;
 }
 
+.advice {
+    color: red !important;
+}
+
+.available {
+    color: green !important;
+}
+
 .hideMe {
     visibility: hidden;
     height: 0;
@@ -312,9 +319,15 @@ h3.reverse {
     opacity: 0;
 }
 
-.content-wrapper {
+.mw-1440 {
     max-width: 1440px;
     margin: 0 auto;
+}
+
+@media (min-width: 1200px) {
+    .container {
+        max-width: 1220px !important;
+    }
 }
 
 
@@ -609,6 +622,48 @@ body .btn-primary:hover {
     background: #eeeeee !important;
 }
 
+.showMore-btn {
+    text-align: center;
+    background: none;
+    border: none;
+    width: 100%;
+    margin-bottom: 5px;
+    display: none;
+}
+
+.popup-btn {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: white;
+    max-width: 250px;
+    color: var(--light-black);
+    font-weight: 500;
+    border: 2px solid transparent !important;
+    border-radius: var(--medium-b-radius);
+    padding: 25px 30px;
+    transition: .3s;
+}
+
+.popup-btn:hover {
+    border: 2px solid var(--primary-light) !important;
+}
+
+.popup-btn span {
+    color: var(--primary-dark);
+    font-size: 3rem;
+}
+
+@media (max-width: 576px) {
+    .showMore-btn {
+        display: block;
+    }
+    .btn-primary {
+        width: 90%;
+    }
+}
+
 
 /* ================General::Pagination::================ */
 
@@ -748,6 +803,31 @@ body .btn-primary:hover {
     background: var(--primary);
 }
 
+@media (max-width: 992px) {
+    .header-container {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        background: var(--light-gray);
+        height: 80px;
+        padding: 0 20px;
+    }
+    .header-container .header-logo {
+        width: 100px;
+        position: relative;
+        left: unset;
+    }
+    .header-container #menu-toggle {
+        color: black;
+        display: block;
+    }
+    .header-upper,
+    .header-lower {
+        display: none;
+    }
+}
+
 
 /* ================General::Filter box::================ */
 
@@ -780,7 +860,6 @@ body .btn-primary:hover {
 .mainFilter-box {
     height: auto;
     overflow: hidden;
-    border: 1px solid rgb(209, 209, 209);
     border-radius: 50px;
 }
 
@@ -814,30 +893,35 @@ body .btn-primary:hover {
     width: 100%;
     height: auto;
     overflow: auto;
+    position: relative;
 }
 
-.mainFilter-tabs select {
-    display: none;
-    width: 100%;
-    height: 45px;
-    border: 1px solid gray;
-    border-radius: var(--light-b-radius);
-    margin: 15px 0;
-    padding: 0 10px;
+.mainFilter-tabs .arrowIcon-right {
+    color: var(--light-description);
+    position: absolute;
+    right: 0;
+}
+
+.mainFilter-tabs .arrowIcon-left {
+    color: var(--light-description);
+    position: absolute;
+    left: 0;
 }
 
 .mainFilter-tabs ul {
     display: flex;
     flex-direction: row;
+    flex-wrap: nowrap;
     align-items: center;
     justify-content: start;
     background-color: none;
     height: auto;
     padding: 0;
+    overflow: auto;
     margin: 10px 0;
 }
 
-.mainFilter-tabs ul .mainFilter-tab {
+.mainFilter-tabs ul .mainFilter-tab a {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -854,26 +938,26 @@ body .btn-primary:hover {
     transition: .4s;
 }
 
-.mainFilter-tabs ul li.mainFilter-tab span {
+.mainFilter-tabs ul li.mainFilter-tab a span {
     font-size: 1.4rem;
     margin-right: 5px;
 }
 
-.mainFilter-tabs ul li.mainFilter-tab:hover {
+.mainFilter-tabs ul li.mainFilter-tab:hover a {
     color: var(--primary);
 }
 
-.mainFilter-tab.active {
+.mainFilter-tab.active a {
     color: var(--primary-dark) !important;
 }
 
 @media (max-width: 575.98px) {
-    .mainFilter-tabs select {
+    /* .mainFilter-tabs select {
         display: block;
-    }
-    .mainFilter-tabs ul {
+    } */
+    /* .mainFilter-tabs ul {
         display: none;
-    }
+    } */
 }
 
 
@@ -1105,6 +1189,16 @@ body .btn-primary:hover {
     box-shadow: rgba(0, 0, 0, 0.10) 0 5px 15px;
 }
 
+.event-card h5,
+.event-card h4,
+.event-card span {
+    color: var(--light-black);
+}
+
+.event-card small {
+    color: var(--light-description);
+}
+
 .event-card .card-img-top {
     width: 100%;
     height: 260px;
@@ -1115,7 +1209,7 @@ body .btn-primary:hover {
 
 .event-card .card-body {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: space-between;
     background: white;
     width: 100%;
@@ -1127,71 +1221,36 @@ body .btn-primary:hover {
     z-index: 2;
 }
 
-.event-card .card-rightside {
-    display: flex;
-    flex: 1;
-    flex-direction: column;
-    justify-content: space-between;
-}
-
-.event-card .card-rightside .card-title {
+.event-card .card-body h5 {
     font-size: 14px;
-    text-align: left;
-    margin: 0;
+    font-weight: 500;
+    margin-bottom: 0;
 }
 
-.event-card .rightside-bottom small {
+.event-card .card-content {
     display: flex;
-    align-items: center;
-    text-transform: uppercase;
-    margin: 0;
-}
-
-.event-card .rightside-bottom small span {
-    font-size: 20px;
-    margin-right: 5px;
-}
-
-.event-card .card-leftside {
-    display: flex;
-    flex-direction: column;
+    flex-direction: row;
     justify-content: space-between;
-    width: 110px;
-    border-right: 1px solid rgb(204, 204, 204);
+    width: 100%;
     padding-right: 8px;
     margin-right: 8px;
 }
 
-.event-card .card-leftside span {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    font-size: 24px;
+.event-card .card-content h4.card-supplier {
+    flex: 1;
+    border-right: 1px solid rgb(218, 218, 218);
+    margin-bottom: 0;
 }
 
-.event-card .card-leftside span small {
-    font-size: 12px;
-}
-
-.event-card .card-leftside span.card-date {
+.event-card .card-content h4.card-price {
     font-size: 16px;
     font-weight: bold;
+    padding-left: 15px;
+    margin-bottom: 0;
 }
 
-.event-card .card-leftside span.card-price {
-    font-weight: bold;
-}
-
-.event-card .card-body h5 {
-    font-size: 14px;
-    font-weight: 500;
-    margin-bottom: 15px;
-}
-
-@media (max-width: 991.98px) {
-    .event-card .card-body .card-body-bottom span {
-        font-size: .9rem;
-    }
+.event-card .card-content h4 small {
+    font-size: 12px;
 }
 
 
@@ -1199,10 +1258,10 @@ body .btn-primary:hover {
 
 .food-card {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     align-items: flex-start;
-    width: 395px;
-    height: 160px !important;
+    width: 330px;
+    min-height: 380px;
     background-color: white;
     border-radius: var(--medium-b-radius);
     box-shadow: rgba(0, 0, 0, 0.05) 0 0 10px;
@@ -1217,9 +1276,8 @@ body .btn-primary:hover {
 }
 
 .food-card .card-img-top {
-    max-width: 160px;
-    width: 35%;
-    height: 100%;
+    width: 100%;
+    height: 260px;
     object-fit: cover;
     position: relative;
     z-index: 1;
@@ -1231,7 +1289,7 @@ body .btn-primary:hover {
     justify-content: space-between;
     flex: 1;
     background: white;
-    width: auto;
+    width: 100%;
     height: 100%;
     min-height: 110px;
     padding: 10px;
@@ -1260,15 +1318,16 @@ body .btn-primary:hover {
 
 .food-card .card-body-bottom span {
     display: flex;
+    flex: 1;
     flex-direction: column;
-    align-items: flex-start;
+    align-items: flex-end;
     color: var(--light-black);
     font-weight: bold;
     min-width: 100px;
     margin: auto 0;
-    margin-right: 8px;
-    padding-right: 8px;
-    border-right: 1px solid rgb(204, 204, 204);
+    margin-left: 8px;
+    padding-left: 8px;
+    border-left: 1px solid rgb(204, 204, 204);
 }
 
 .food-card .card-body-bottom span small {
@@ -1406,6 +1465,29 @@ body .btn-primary:hover {
     font-size: 20px;
 }
 
+@media (max-width: 992px) {
+    .supplier-card {
+        flex-direction: column;
+        height: auto;
+        width: 95%;
+        margin-bottom: 15px;
+        margin: 0 auto;
+    }
+    .supplier-card .card-img {
+        max-width: none;
+        width: 100%;
+        height: 220px;
+    }
+    .supplier-card .card-body {
+        flex-direction: column;
+        height: auto;
+    }
+    .supplier-card .card-body .card-info,
+    .supplier-card .card-body .card-price {
+        width: 100%;
+    }
+}
+
 
 /* ================General::General Card::================ */
 
@@ -1422,6 +1504,7 @@ body .btn-primary:hover {
     position: relative;
     overflow: hidden;
     transition: .4s ease-out;
+    cursor: pointer;
 }
 
 .swiper-slide {
@@ -1455,39 +1538,35 @@ body .btn-primary:hover {
     z-index: 2;
 }
 
-.card .card-body .card-title small {
-    color: gray;
-}
-
-.card .card-body h5 {
+.card .card-body .card-title {
     font-size: 14px;
     font-weight: 500;
     margin-bottom: 15px;
 }
 
-.card .card-body .card-body-bottom {
+.card .card-body .card-title small {
+    color: var(--light-description);
+}
+
+.card .card-body .card-content {
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
 }
 
-.card .card-body .card-body-bottom span {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    color: var(--light-description) !important;
+.card .card-body .card-content h4 {
     font-weight: bold;
-    margin: auto 0;
 }
 
 @media (max-width: 991.98px) {
-    .card .card-body .card-body-bottom span {
+    .card .card-body .card-content span {
         font-size: .9rem;
     }
 }
 
-.card .card-body .card-body-bottom .card-btn {
+
+/* .card .card-body .card-content .card-btn {
     color: white;
     font-size: 14px;
     text-align: center;
@@ -1499,9 +1578,9 @@ body .btn-primary:hover {
     padding: 6px 0;
 }
 
-.card .card-body .card-body-bottom .card-btn:hover {
+.card .card-body .card-content .card-btn:hover {
     background-color: var(--primary-light);
-}
+} */
 
 
 /* ================General::Half Carousel::================ */
@@ -1551,6 +1630,26 @@ body .btn-primary:hover {
 
 .half-carousel-cards .swiper-wrapper {
     padding-bottom: 15px;
+}
+
+@media (max-width: 576px) {
+    body .half-carousel .half-carousel-info {
+        padding: 35px 10px 0 25px;
+    }
+}
+
+@media (max-width: 992px) {
+    .half-carousel {
+        height: auto;
+    }
+    .half-carousel .half-carousel-info {
+        margin-bottom: 35px;
+        overflow: auto;
+        padding: 35px 0 0;
+    }
+    .half-carousel .half-carousel-cards {
+        height: auto;
+    }
 }
 
 
@@ -1810,6 +1909,12 @@ body .btn-primary:hover {
     }
 }
 
+@media (max-width: 1200px) {
+    .events-section {
+        padding: 45px 0;
+    }
+}
+
 
 /* ================Home::Anouncements Section::================ */
 
@@ -1929,6 +2034,46 @@ body .btn-primary:hover {
     justify-content: space-between;
 }
 
+@media (max-width: 576px) {
+    .food-section {
+        padding: 45px 0px !important;
+    }
+    .food-card .card-img-top {
+        max-width: 160px;
+        width: 35%;
+    }
+    .food-search-container .form-group {
+        border-radius: var(--light-b-radius);
+        overflow: hidden;
+    }
+    .food-search-container .form-group input {
+        flex: 1;
+        height: 45px;
+        border-radius: 0;
+    }
+    .food-search-container .form-group button {
+        margin: 0;
+        height: 45px;
+        border-radius: 0;
+    }
+}
+
+@media (max-width: 768px) {
+    .food-search-container .form-group {
+        width: 100%;
+    }
+    .food-card .card-img-top {
+        max-width: 160px;
+        width: 35%;
+    }
+}
+
+@media (max-width: 1024px) {
+    .food-section {
+        padding: 45px 25px;
+    }
+}
+
 
 /* ================::Suppliers Page::================ */
 
@@ -1941,9 +2086,22 @@ body .btn-primary:hover {
     margin: 0 auto 25px;
 }
 
-.suppliersPage-body .filterCards-cards .swiper-button-prev,
-.suppliersPage-body .filterCards-cards .swiper-button-next {
+.suppliersPage-header .filterCards-cards .swiper-button-prev,
+.suppliersPage-header .filterCards-cards .swiper-button-next {
+    box-shadow: none;
     background: none;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    top: 50%;
+    margin-top: -28px;
+}
+
+.suppliersPage-header .filterCards-cards .swiper-button-prev {
+    left: 5px !important;
+}
+
+.suppliersPage-header .filterCards-cards .swiper-button-next {
+    right: 5px !important;
 }
 
 .suppliersPage-header {
@@ -1957,6 +2115,10 @@ body .btn-primary:hover {
 }
 
 @media (max-width: 992px) {
+    .suppliersPage-body,
+    .suppliersPage-header {
+        padding: 30px 15px 0;
+    }
     .suppliersPage-filter {
         padding: 35px 20px;
     }
@@ -2120,6 +2282,37 @@ body .btn-primary:hover {
     .cards-container .card {
         flex: 0 1 32%;
         margin: 1em .25em;
+    }
+}
+
+
+/* ::Hotel Cards Container::================ */
+
+.suppliersPage-cards {
+    display: flex;
+    flex-direction: row;
+    height: auto;
+}
+
+.banner-announcement {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--light-description);
+    width: 200px;
+    height: 100%;
+    min-height: 550px;
+    background: rgb(190, 190, 190);
+    margin-left: 25px;
+}
+
+.hotelCards-container {
+    flex: 1;
+}
+
+@media (max-width: 1200px) {
+    .banner-announcement {
+        display: none;
     }
 }
 

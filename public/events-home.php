@@ -1,5 +1,5 @@
 <div class="container-fluid body-bg">
-    <div class="content-wrapper events-section">
+    <div class="mw-1440 events-section">
         <div class="section-title">
             <h2>Eventos</h2>
             <p>Veja abaixo os eventos disponíveis para os próximos dias.</p>
@@ -35,7 +35,7 @@
         <div class="swiper-container event-cards">
             <div class="swiper-wrapper">
                 <?php 
-                    for($i = 0; $i < 3; $i++){
+                    for($i = 0; $i < 4; $i++){
                         include 'event-card.php';
                     }
                 ?>

@@ -13,10 +13,10 @@
             </div>
         </div>
         <div class="card-body-bottom">
+            <small>de 44 a 60 min.</small>
             <span>
                 <small>A partir de</small> R$ 600,00
             </span>
-            <small>de 44 a 60 min.</small>
         </div>
     </div>
 </div>
