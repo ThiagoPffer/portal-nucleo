@@ -6,7 +6,7 @@
             <p>O que você procura?</p>
             <div class="mainFilter-tabs">
                 <span class="mdi mdi-chevron-right arrowIcon-right"></span>
-                <span class="mdi mdi-chevron-left arrowIcon-left"></span>
+                <!-- <span class="mdi mdi-chevron-left arrowIcon-left"></span> -->
                 <ul class="nav nav-tabs" id="mainFilterTabs" role="tablist">
                     <li class="mainFilter-tab active">
                         <a id="hotel-tab" data-toggle="tab" href="#hotel" role="tab" aria-controls="hotel" aria-selected="true"><span class="mdi mdi-office-building-outline "></span>Hospedagem</a>
@@ -18,7 +18,7 @@
                         <a id="leisure-tab" data-toggle="tab" href="#leisure" role="tab" aria-controls="leisure" aria-selected="true"><span class="mdi mdi-basketball "></span>Lazer</a>
                     </li>
                     <li class="mainFilter-tab ">
-                        <a id="event-tab" data-toggle="tab" href="#event" role="tab" aria-controls="event" aria-selected="true"><span class="mdi mdi-calendar-week-begin "></span>Eventos</a>
+                        <a id="event-tab" data-toggle="tab" href="#event" role="tab" aria-controls="event" aria-selected="true"><span class="mdi mdi-calendar-week-begin"></span>Eventos</a>
                     </li>
                     <li class="mainFilter-tab ">
                         <a id="transfer-tab" data-toggle="tab" href="#transfer" role="tab" aria-controls="transfer" aria-selected="true"><span class="mdi mdi-van-passenger "></span>Transporte</a>

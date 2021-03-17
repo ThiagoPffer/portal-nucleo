@@ -149,13 +149,14 @@
                 el: '.swiper-pagination',
             },
             breakpoints: {
-                // when window width is >= 0px
                 0: {
                     slidesPerView: 1
                 },
-                // when window width is >= 520px
                 520: {
                     slidesPerView: 2
+                },
+                768: {
+                    slidesPerView: 3
                 },
                 1024: {
                     slidesPerView: 4
@@ -171,14 +172,15 @@
                 el: '.swiper-pagination',
             },
             breakpoints: {
-                // when window width is >= 0px
                 0: {
                     centeredSlides: true,
                     slidesPerView: 1
                 },
-                // when window width is >= 520px
                 520: {
                     slidesPerView: 2
+                },
+                768: {
+                    slidesPerView: 3
                 },
                 1024: {
                     slidesPerView: 4
